@@ -54,7 +54,7 @@ $(".getGif").on("click", function() {
               var p = $("<p>").text("Rating: " + rating);
 
               // Creating an image tag
-              var animalImage = $("<img class='gif'>");
+              var animalImage = $("<img class='pic'>");
 
               // Giving the image tag an src attribute of a proprty pulled off the
               // result item
@@ -64,11 +64,12 @@ $(".getGif").on("click", function() {
               animalImage.attr("data-state", "still");
 
 
-              // Appending the paragraph and personImage we created to the "gifDiv" div we created
-              gifDiv.append(p);
+              // Appending the paragraph and animalImage to the "gifDiv" div 
+              
               gifDiv.append(animalImage);
+              gifDiv.append(p);
 
-              // Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
+              
               $("#display").prepend(gifDiv);
     	}
     });
@@ -81,9 +82,11 @@ $(".getGif").on("click", function() {
 
 	});
 
-$(".gif").on("click", function() {
-    	console.log("event");
+
+$(".pic").on("click", function() {
+    	
     		var state = $(this).attr("data-state");
+    		console.log(state);
 
       if (state === "still") {
         $(this).attr("src", $(this).data("animate"));
@@ -96,3 +99,11 @@ $(".gif").on("click", function() {
     }
 
     });
+
+$("#animalButton").on("click", function() {
+
+	var newAnimal = $("input.text").val()
+	console.log(newAnimal);
+	
+
+});
