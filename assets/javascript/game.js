@@ -37,7 +37,7 @@ $(document).on("click", ".getGif", function() {
 	var searchTerm = $(this).data("animal");
 
 	console.log(searchTerm);
-	var queryURL =  "http://api.giphy.com/v1/gifs/search?q=" +
+	var queryURL =  "https://api.giphy.com/v1/gifs/search?q=" +
         searchTerm + "&api_key=dc6zaTOxFJmzC&limit=10";
 
     $.ajax({
