@@ -14,6 +14,8 @@ var topics = ["giraffe", "lion", "dog", "cat", "horse", "bear"]
 
 var makeButtons = function() {
 
+	$("#buttons").empty();
+
 	for (var i=0;i<topics.length;i++) {
 		var currentAnimal = topics[i]
 		$("#buttons").append("<button class='getGif' data-animal=" + topics[i] + ">" + topics[i] + "</button>");
@@ -23,12 +25,15 @@ var makeButtons = function() {
 
 };
 
+
+//calling the make buttons function
 makeButtons();
 
 
 
-$(".getGif").on("click", function() {
+$(document).on("click", ".getGif", function() {
 
+	$("#display").empty();
 	var searchTerm = $(this).data("animal");
 
 	console.log(searchTerm);
@@ -83,7 +88,7 @@ $(".getGif").on("click", function() {
 	});
 
 
-$(".pic").on("click", function() {
+$(document).on("click", ".pic", function() {
     	
     		var state = $(this).attr("data-state");
     		console.log(state);
@@ -100,10 +105,17 @@ $(".pic").on("click", function() {
 
     });
 
-$("#animalButton").on("click", function() {
-
-	var newAnimal = $("input.text").val()
+$(document).on("click", "#animalButton", function() {
+	event.preventDefault();
+	var newAnimal = $("input:text").val()
 	console.log(newAnimal);
+	topics.push(newAnimal);
+	console.log(topics);
+	
+	makeButtons();
 	
 
 });
+
+
+

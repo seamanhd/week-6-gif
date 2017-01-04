@@ -2,4 +2,29 @@
 	box-sizing: border-box; 
 }
 
+div {
+	text-align: center;
+	margin: 20px;
+}
+
+#instructions {
+	font-size: 24px;
+}
+
+button {
+	background-color: #d9b3ff;
+	margin: 10px;
+	padding: 10px;
+	border: none;
+
+}
+
+img {
+	display: inline;
+	float: none;
+}
+
+footer {
+	text-align: center;
+}
  

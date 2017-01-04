@@ -14,23 +14,29 @@
 </head>
 <body>
 
-<div id="instructions">
-Click a button to see some cute animals!
-</div>
-<div class="row">
-<div id="buttons" class="col-md-12">
-</div>
-</div>
-<div class="row">
-<div id="display" class="col-md-9">
-</div>
-<div id="form" class="col-md-3"> <form>
-  Add An Animal:
-  <input type="text" name="formInput"> 
- <input id="animalButton" type="submit" value="Add">
-</form>
+	<div id="instructions">
+		Click a button to see some cute animals!
+	</div>
 
-</div>
+	<div class="row">
+		<div id="buttons" class="col-md-12">
+		</div>
+	</div>
+
+	<div id="form" class="col-md-12"> 
+		<form onsubmit="return false">
+  			Add An Animal:
+  			<input type="text" name="formInput"> 
+ 			<input id="animalButton" type="button" value="Add">
+		</form>
+
+	</div>
+
+	<div class="row">
+		<div id="display" class="col-md-12">
+		</div>
+	</div>
+
 		
 
 
@@ -38,7 +44,7 @@ Click a button to see some cute animals!
 
 
 
-<footer class="footer col-md-12"> © Heather Seaman 2016 </footer>
+<footer class="footer col-md-12"> © Heather Seaman 2017 </footer>
 
 <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="assets/javascript/game.js"></script> 
