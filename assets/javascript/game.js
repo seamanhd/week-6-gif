@@ -105,7 +105,7 @@ $(document).on("click", ".pic", function() {
 
     });
 
-$(document).on("click", "#animalButton", function() {
+$(document).on("click", "#animalButton", function(event) {
 	event.preventDefault();
 	var newAnimal = $("input:text").val()
 	console.log(newAnimal);
